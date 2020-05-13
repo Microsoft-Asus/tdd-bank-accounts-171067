@@ -1,0 +1,10 @@
+C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\bin\Debug\BankAccounts.exe.config
+C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\bin\Debug\BankAccounts.exe
+C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\bin\Debug\BankAccounts.pdb
+C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\bin\Debug\BankAccounts.xml
+C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\obj\Debug\BankAccounts.vbprojAssemblyReference.cache
+C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\obj\Debug\BankAccounts.Resources.resources
+C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\obj\Debug\BankAccounts.vbproj.GenerateResource.cache
+C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\obj\Debug\BankAccounts.exe
+C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\obj\Debug\BankAccounts.xml
+C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\obj\Debug\BankAccounts.pdb
