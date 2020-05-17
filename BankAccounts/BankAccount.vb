@@ -63,4 +63,13 @@
         Return Nothing
     End Function
 
+    Public Function Tostring() As String
+        Dim Accountstring As New StringBuilder()
+        Accountstring.Append("MR S. N. David" & vbCrLf)
+        Accountstring.Append("ABCD 890111 11167890" & vbCrLf)
+        Accountstring.Append(2.5 & vbCrLf)
+        Accountstring.Append(200000.8 & vbCrLf)
+        Accountstring.Append("whoo Vill" & vbCrLf)
+    End Function
+
 End Class

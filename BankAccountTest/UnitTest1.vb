@@ -143,4 +143,22 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Return New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate, BankBalance, CountryOfOrigin)
     End Function
 
+    <TestMethod()> Public Sub TestTostringMethod()
+        'Arrange 
+        Dim ExpecteValuString As New StringBuilder()
+        ExpecteValuString.Append("MR S. N. David" & vbCrLf)
+        ExpecteValuString.Append("ABCD 890111 11167890" & vbCrLf)
+        ExpecteValuString.Append(2.5 & vbCrLf)
+        ExpecteValuString.Append(200000.8 & vbCrLf)
+        ExpecteValuString.Append("whoo Vill" & vbCrLf)
+        Console.WriteLine(ExpecteValuString.ToString())
+
+        'ACT 
+        Dim account1 As BankAccounts.BankAccount = NewAccount()
+
+        Dim actualstring = account1.ToString()
+        'assert
+        Assert.AreEqual(ExpecteValuString.ToString(), actualstring)
+    End Sub
+
 End Class
