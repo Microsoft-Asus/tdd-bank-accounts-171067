@@ -1,4 +1,5 @@
 ﻿Public Class BankAccount
+
     Private AccountHolder As String
     Private AccountNumber As String
     Private InterestRate As Double
@@ -63,13 +64,15 @@
         Return Nothing
     End Function
 
-    Public Function Tostring() As String
+    Public Overrides Function Tostring() As String
+        Imports System.Text
         Dim Accountstring As New StringBuilder()
         Accountstring.Append("MR S. N. David" & vbCrLf)
         Accountstring.Append("ABCD 890111 11167890" & vbCrLf)
         Accountstring.Append(2.5 & vbCrLf)
         Accountstring.Append(200000.8 & vbCrLf)
         Accountstring.Append("whoo Vill" & vbCrLf)
+        Return Accountstring
     End Function
 
 End Class
