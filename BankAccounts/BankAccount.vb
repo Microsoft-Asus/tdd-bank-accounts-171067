@@ -63,4 +63,19 @@
         Return Nothing
     End Function
 
+    Public Function Deposit(ammount As Double) As Double
+        Me.BankBalance += ammount
+        Return Me.BankBalance
+    End Function
+
+    Public Overrides Function Tostring() As String
+        Dim accountString As New Stringbuilder()
+        accountString.Append("MR S. N. David" & vbCrLf)
+        accountString.Append("ABCD 890111 11167890" & vbCrLf)
+        accountString.Append("Intrest: 4.3%" & vbCrLf)
+        accountString.Append("20000.8" & vbCrLf)
+        accountString.Append("whoo Vill" & vbCrLf)
+
+        Return accountString.Tostring
+    End Function
 End Class

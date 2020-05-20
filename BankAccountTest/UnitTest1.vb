@@ -8,7 +8,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         'Arrange 
         Dim Accountholder As String = "MR S. N. David"
         Dim AccountNumber As String = "ABCD 890111 11167890"
-        Dim Interestrate As Double = 2.5
+        Dim Interestrate As. Double = 2.5
         Dim BankBalance As Double = 200000.8
         Dim CountryOfOrigin As String = "whoo Vill"
 
@@ -134,13 +134,30 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Assert.AreEqual(account1.GetBankBalance(), 200000)
     End Sub
 
+    <TestMethod()> Public Sub TestDeposit()
+        'Arrange
+        Dim account1 As BankAccounts.BankAccount = Me.NewAccount()
+        Dim ExpectedValues As Double = 200000.8 + 800
+        'ACT
+        Dim actualvalue As Double = account1.deposit(800)
+        'assert 
+        Assert.AreEqual(ExpectedValues, actualvalue)
+    End Sub
+
+    <TestMethod()> Public Sub TestToStringMethod()
+        Dim ExpectedValueString As New StringBuilder()
+        ExpectedValueString.Append("MR S. N. David" & vbCrLf)
+        ExpectedValueString.Append("ABCD 890111 11167890" & vbCrLf)
+    End Sub
+
     Private Function NewAccount() As BankAccounts.BankAccount
         Dim Accountholder As String = "MR S. N. David"
         Dim AccountNumber As String = "ABCD 890111 11167890"
         Dim Interestrate As Double = 2.5
         Dim BankBalance As Double = 200000.8
         Dim CountryOfOrigin As String = "whoo Vill"
-        Return New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate, BankBalance, CountryOfOrigin)
+        Dim Account1 As New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate, BankBalance, CountryOfOrigin)
+        Return account1
     End Function
 
 End Class
