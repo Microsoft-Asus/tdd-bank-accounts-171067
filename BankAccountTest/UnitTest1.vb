@@ -8,7 +8,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         'Arrange 
         Dim Accountholder As String = "MR S. N. David"
         Dim AccountNumber As String = "ABCD 890111 11167890"
-        Dim Interestrate As. Double = 2.5
+        Dim Interestrate As Double = 2.5
         Dim BankBalance As Double = 200000.8
         Dim CountryOfOrigin As String = "whoo Vill"
 
@@ -148,6 +148,14 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Dim ExpectedValueString As New StringBuilder()
         ExpectedValueString.Append("MR S. N. David" & vbCrLf)
         ExpectedValueString.Append("ABCD 890111 11167890" & vbCrLf)
+        ExpectedValueString.Append("Intrest Rate: 2.5%" & vbCrLf)
+        ExpectedValueString.Append("Account Balance $200000.8" & vbCrLf)
+
+        Dim Account1 As BankAccounts.BankAccount = NewAccount()
+        'ACT 
+        Dim actualstring = Account1.Tostring()
+        'Assert 
+        Assert.AreEqual(ExpectedValueString.ToString(), actualstring)
     End Sub
 
     Private Function NewAccount() As BankAccounts.BankAccount

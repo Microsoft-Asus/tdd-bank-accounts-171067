@@ -69,13 +69,13 @@
     End Function
 
     Public Overrides Function Tostring() As String
-        Dim accountString As New Stringbuilder()
+        Dim accountString As New StringBuilder()
         accountString.Append("MR S. N. David" & vbCrLf)
         accountString.Append("ABCD 890111 11167890" & vbCrLf)
         accountString.Append("Intrest: 4.3%" & vbCrLf)
         accountString.Append("20000.8" & vbCrLf)
         accountString.Append("whoo Vill" & vbCrLf)
 
-        Return accountString.Tostring
+        Return accountString.ToString()
     End Function
 End Class
