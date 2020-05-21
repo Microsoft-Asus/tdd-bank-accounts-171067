@@ -158,6 +158,16 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Assert.AreEqual(ExpectedValueString.ToString(), actualstring)
     End Sub
 
+    <TestMethod()> Public Sub TestWithdrallSmall()
+        'Arrange 
+        Dim account1 As BankAccounts.BankAccount = Me.NewAccount()
+        Dim expectedval As Double = 200000.8 - 5000
+        'ACT
+        Dim NewBalance = account1.Withdrallsmall(5000)
+        'Assert 
+        Assert.AreEqual(expectedval, NewBalance)
+    End Sub
+
     Private Function NewAccount() As BankAccounts.BankAccount
         Dim Accountholder As String = "MR S. N. David"
         Dim AccountNumber As String = "ABCD 890111 11167890"

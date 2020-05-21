@@ -68,8 +68,13 @@
         Return Me.BankBalance
     End Function
 
+    Public Function WihtDrawll(Ammount As Double) As Double
+        Me.BankBalance -= Ammount
+        Return Me.BankBalance
+    End Function
+
     Public Overrides Function Tostring() As String
-        Dim accountString As New StringBuilder()
+        Dim accountString As New Stringbuilder()
         accountString.Append("MR S. N. David" & vbCrLf)
         accountString.Append("ABCD 890111 11167890" & vbCrLf)
         accountString.Append("Intrest: 4.3%" & vbCrLf)
