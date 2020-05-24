@@ -7,7 +7,7 @@
 
     Public Sub New(AccountHolder As String, AccountNumber As String, InterestRate As Double, BankBalance As Double, CountryOfOrigin As String)
         Me.AccountHolder = AccountHolder
-        Me.AccountHolder = AccountNumber
+        Me.AccountNumber = AccountNumber
         Me.InterestRate = InterestRate
         Me.BankBalance = BankBalance
         Me.CountryOfOrigin = CountryOfOrigin
@@ -15,7 +15,7 @@
 
     Public Sub New(AccountHolder As String, AccountNumber As String, InterestRate As Double, BankBalance As Double)
         Me.AccountHolder = AccountHolder
-        Me.AccountHolder = AccountNumber
+        Me.AccountNumber = AccountNumber
         Me.InterestRate = InterestRate
         Me.BankBalance = BankBalance
 
@@ -23,7 +23,7 @@
 
     Public Sub New(AccountHolder As String, AccountNumber As String, InterestRate As Double)
         Me.AccountHolder = AccountHolder
-        Me.AccountHolder = AccountNumber
+        Me.AccountNumber = AccountNumber
         Me.InterestRate = InterestRate
 
 
@@ -68,13 +68,13 @@
         Return Me.BankBalance
     End Function
 
-    Public Function WihtDrawll(Ammount As Double) As Double
+    Public Function Withdrawll(Ammount As Double) As Double
         Me.BankBalance -= Ammount
         Return Me.BankBalance
     End Function
 
     Public Overrides Function Tostring() As String
-        Dim accountString As New Stringbuilder()
+        Dim accountString As New StringBuilder()
         accountString.Append("MR S. N. David" & vbCrLf)
         accountString.Append("ABCD 890111 11167890" & vbCrLf)
         accountString.Append("Intrest: 4.3%" & vbCrLf)
@@ -83,4 +83,6 @@
 
         Return accountString.ToString()
     End Function
+
+    
 End Class

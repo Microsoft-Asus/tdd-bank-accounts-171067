@@ -15,7 +15,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         'ACT
         Dim Account1 As New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate, BankBalance, CountryOfOrigin)
         Dim Account2 As New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate, BankBalance)
-        Dim Account3 As New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate,)
+        Dim Account3 As New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate)
         'Assert
         Assert.IsNotNull(Account1)
         Assert.IsNotNull(Account2)
@@ -125,10 +125,10 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         ' p x r x t = i => X + 200000 = A
 
         'Arrange 
-        Dim account1 As New BankAccounts.BankAccount = Me.NewAccount()
+        Dim Account1 As BankAccounts.BankAccount = Me.NewAccount()
 
         'ACT 
-        account1.InterestRate
+        Account1.ApplyInterestRate()
 
         'Assert 
         Assert.AreEqual(account1.GetBankBalance(), 200000)
@@ -163,7 +163,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Dim account1 As BankAccounts.BankAccount = Me.NewAccount()
         Dim expectedval As Double = 200000.8 - 5000
         'ACT
-        Dim NewBalance = account1.Withdrallsmall(5000)
+        Dim NewBalance = account1.Withdrawll(5000)
         'Assert 
         Assert.AreEqual(expectedval, NewBalance)
     End Sub
@@ -173,7 +173,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Dim AccountNumber As String = "ABCD 890111 11167890"
         Dim Interestrate As Double = 2.5
         Dim BankBalance As Double = 200000.8
-        Dim CountryOfOrigin As String = "whoo Vill"
+        Dim CountryOfOrigin As String = "whoo Ville"
         Dim Account1 As New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate, BankBalance, CountryOfOrigin)
         Return account1
     End Function

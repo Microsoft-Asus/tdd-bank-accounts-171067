@@ -8,3 +8,4 @@ C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\ob
 C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\obj\Debug\BankAccounts.exe
 C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\obj\Debug\BankAccounts.xml
 C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\obj\Debug\BankAccounts.pdb
+C:\Users\Gaming Laptop\Documents\GitHub\tdd-bank-accounts-171067\BankAccounts\obj\Debug\BankAccounts.BankAccountsForm.resources
