@@ -1,4 +1,6 @@
-﻿Public Class BankAccount
+﻿Imports System.Text
+
+Public Class BankAccount
     Private AccountHolder As String
     Private AccountNumber As String
     Private InterestRate As Double
@@ -84,5 +86,4 @@
         Return accountString.ToString()
     End Function
 
-    
 End Class
