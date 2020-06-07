@@ -8,7 +8,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         'Arrange 
         Dim Accountholder As String = "MR S. N. David"
         Dim AccountNumber As String = "ABCD 890111 11167890"
-        Dim Interestrate As Double = 2.5
+        Dim Interestrate As Double = 4.3
         Dim BankBalance As Double = 200000.8
         Dim CountryOfOrigin As String = "whoo Vill"
 
@@ -34,8 +34,8 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         'Arrange 
         Dim Accountholder As String = "MR S. N. David"
         Dim AccountNumber As String = "ABCD 890111 11167890"
-        Dim Interestrate As Double = 2.5
-        Dim BankBalance As Double = 200000.8
+        Dim Interestrate As Double = 4.3
+        Dim BankBalance As Double = 20000.8
         Dim CountryOfOrigin As String = "whoo Vill"
         Dim Account1 As New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate, BankBalance, CountryOfOrigin)
 
@@ -50,8 +50,8 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
     <TestMethod()> Public Sub TestGetAccountNumber()
         Dim Accountholder As String = "MR S. N. David"
         Dim AccountNumber As String = "ABCD 890111 11167890"
-        Dim Interestrate As Double = 2.5
-        Dim BankBalance As Double = 200000.8
+        Dim Interestrate As Double = 4.3
+        Dim BankBalance As Double = 20000.8
         Dim CountryOfOrigin As String = "whoo Vill"
         Dim Account1 As New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate, BankBalance, CountryOfOrigin)
 
@@ -66,8 +66,8 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         'Arrange 
         Dim Accountholder As String = "MR S. N. David"
         Dim AccountNumber As String = "ABCD 890111 11167890"
-        Dim Interestrate As Double = 2.5
-        Dim BankBalance As Double = 200000.8
+        Dim Interestrate As Double = 4.3
+        Dim BankBalance As Double = 20000.8
         Dim CountryOfOrigin As String = "whoo Vill"
         Dim Account1 As New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate, BankBalance, CountryOfOrigin)
 
@@ -75,15 +75,15 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Dim Interest As Double = Account1.GetInterestRate
 
         'Assert
-        Assert.AreEqual(Interestrate, 2.5)
+        Assert.AreEqual(Interestrate, 4.3)
     End Sub
 
     <TestMethod()> Public Sub TestGetBankBalance()
         'Assert 
         Dim Accountholder As String = "MR S. N. David"
         Dim AccountNumber As String = "ABCD 890111 11167890"
-        Dim Interestrate As Double = 2.5
-        Dim BankBalance As Double = 200000.8
+        Dim Interestrate As Double = 4.3
+        Dim BankBalance As Double = 20000.8
         Dim CountryOfOrigin As String = "whoo Vill"
         Dim Account1 As New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate, BankBalance, CountryOfOrigin)
 
@@ -91,15 +91,15 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Dim Balance As Double = Account1.GetBankBalance
 
         'Assert
-        Assert.AreEqual(BankBalance, 20000)
+        Assert.AreEqual(BankBalance, 20000.8)
     End Sub
 
     <TestMethod()> Public Sub TestGetOriginCountry()
         'Assert
         Dim Accountholder As String = "MR S. N. David"
         Dim AccountNumber As String = "ABCD 890111 11167890"
-        Dim Interestrate As Double = 2.5
-        Dim BankBalance As Double = 200000.8
+        Dim Interestrate As Double = 4.3
+        Dim BankBalance As Double = 20000.8
         Dim CountryOfOrigin As String = "whoo Vill"
         Dim Account1 As New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate, BankBalance, CountryOfOrigin)
 
@@ -107,7 +107,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Dim OriginCountry As String = Account1.GetOriginCountry
 
         'Assert
-        Assert.AreEqual(CountryOfOrigin, "Whoo Vill")
+        Assert.AreEqual(CountryOfOrigin, "whoo Vill")
     End Sub
 
     <TestMethod()> Public Sub TestSetInterestRate()
@@ -115,10 +115,10 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Dim Account1 As BankAccounts.BankAccount = Me.NewAccount()
 
         'ACT 
-        Account1.SetInterestRate(5.1)
+        Account1.SetInterestRate(4.3)
 
         'Assert
-        Assert.AreEqual(5.1, Account1.GetInterestRate())
+        Assert.AreEqual(200000.8, Account1.GetInterestRate())
     End Sub
 
     <TestMethod()> Public Sub TestApplyInterestRate()
@@ -131,7 +131,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Account1.ApplyInterestRate()
 
         'Assert 
-        Assert.AreEqual(Account1.GetBankBalance(), 200000)
+        Assert.AreEqual(Account1.GetBankBalance(), 716.67)
     End Sub
 
     <TestMethod()> Public Sub TestDeposit()
@@ -148,8 +148,9 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
         Dim ExpectedValueString As New StringBuilder()
         ExpectedValueString.Append("MR S. N. David" & vbCrLf)
         ExpectedValueString.Append("ABCD 890111 11167890" & vbCrLf)
-        ExpectedValueString.Append("Intrest Rate: 2.5%" & vbCrLf)
-        ExpectedValueString.Append("Account Balance $200000.8" & vbCrLf)
+        ExpectedValueString.Append("Intrest: 4.3" & vbCrLf)
+        ExpectedValueString.Append("20000.8" & vbCrLf)
+        ExpectedValueString.Append("whoo Vill" & vbCrLf)
 
         Dim Account1 As BankAccounts.BankAccount = NewAccount()
         'ACT 
@@ -171,7 +172,7 @@ Imports Microsoft.VisualStudio.TestTools.UnitTesting
     Private Function NewAccount() As BankAccounts.BankAccount
         Dim Accountholder As String = "MR S. N. David"
         Dim AccountNumber As String = "ABCD 890111 11167890"
-        Dim Interestrate As Double = 2.5
+        Dim Interestrate As Double = 4.3
         Dim BankBalance As Double = 200000.8
         Dim CountryOfOrigin As String = "whoo Ville"
         Dim Account1 As New BankAccounts.BankAccount(Accountholder, AccountNumber, Interestrate, BankBalance, CountryOfOrigin)

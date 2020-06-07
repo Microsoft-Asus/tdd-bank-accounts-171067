@@ -30,7 +30,9 @@ Public Class BankAccount
 
 
     End Sub
-
+    Public Function GetCountry() As String
+        Return Me.CountryOfOrigin
+    End Function
 
     Public Function GetAccountHolder() As String
         Return Me.AccountHolder
@@ -79,7 +81,7 @@ Public Class BankAccount
         Dim accountString As New StringBuilder()
         accountString.Append("MR S. N. David" & vbCrLf)
         accountString.Append("ABCD 890111 11167890" & vbCrLf)
-        accountString.Append("Intrest: 4.3%" & vbCrLf)
+        accountString.Append("Intrest: 4.3" & vbCrLf)
         accountString.Append("20000.8" & vbCrLf)
         accountString.Append("whoo Vill" & vbCrLf)
 
